@@ -1,2 +1,2 @@
 # qiruiyin.github.io
-个人博客
+戚瑞印的博客
