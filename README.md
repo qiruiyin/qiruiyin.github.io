@@ -1,2 +1,5 @@
-# qiruiyin.github.io
-戚瑞印的博客
+#jekylll blog
+
+### 基于jekyll的blog
+### 使用bootstrap框架
+### font-awesome
