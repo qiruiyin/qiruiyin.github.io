@@ -19,3 +19,9 @@ github_username:  qiruiyin
 
 # Build settings
 markdown: kramdown
+
+# 分页
+permalink: pretty
+gems: [jekyll-paginate]
+paginate: 6
+paginate_path: "page:num"

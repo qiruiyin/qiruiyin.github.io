@@ -2,34 +2,75 @@
 layout: default
 ---
 <style>
-    .site-header {
-      position: static;
-      height: 400px;
-      border-top: 0;
-    }
-    .waves {
-      position: absolute;
-      top: 56px;
-    }
-  </style>
+  .site-header {
+    position: static;
+    height: 450px;
+    border-top: 0;
+  }
+  .waves {
+    position: absolute;
+    top: 56px;
+  }
+</style>
 
 <div class="home">
-
-  <h1 class="page-heading">文章</h1>
   
   <ul class="post-list">
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
       </li>
     {% endfor %}
+
+    <!-- Pagination links -->
+    <div class="pagination">
+      {% if paginator.total_pages > 6 %}
+        <a href="/">首页</a> 
+        {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path }}" class="previous">上一页</a>
+        {% else %}
+          <span class="previous">上一页</span>
+        {% endif %}
+
+        {% for count in (1..paginator.total_pages) limit:8 %} 
+          {% if count == paginator.page %} 
+            <span class="current-page">{{count}}</span> 
+          {% else if count == 1 %} 
+            <a href="/">{{count}}</a> 
+          {% else %}
+            <a href="/page{{count}}">{{count}}</a> 
+          }
+          {% endif %} 
+        {% endfor %} 
+        
+        {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path }}" class="next">下一页</a>
+        {% else %}
+          <span class="next ">下一页</span>
+        {% endif %}
+        <a href="/page{{paginator.total_pages}}">末页</a> 
+        <span class="page_number">共{{paginator.total_pages}}页</span>
+      {% endif %}
+    </div>
   </ul>
 
 </div>
+
+<!-- This loops through the paginated posts -->
+<!-- {% for post in paginator.posts %}
+  <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+  <p class="author">
+    <span class="date">{{ post.date }}</span>
+  </p>
+  <div class="content">
+    {{ post.content }}
+  </div>
+{% endfor %} -->
+
+
 
   <script src="{{ "/js/three/three.min.js" }}"></script>
   <script src="{{ "/js/three/Projector.js" }}"></script>

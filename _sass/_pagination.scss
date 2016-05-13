@@ -1,0 +1,12 @@
+.pagination {
+	
+	& > a, & > span {
+		padding: 5px 8px;
+		border: 1px solid #2a7ae2;
+		border-radius: 4px;
+	}
+	
+	& > .page_number {
+		border: none;
+	}
+}
