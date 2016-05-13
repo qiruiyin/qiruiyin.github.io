@@ -2,7 +2,7 @@
 layout: post
 title:  "常用meta"
 date:   2016-05-12
-categories: jekyll update
+categories: html
 ---
 
 ### 搜索引擎

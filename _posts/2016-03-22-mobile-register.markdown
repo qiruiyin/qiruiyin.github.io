@@ -2,7 +2,7 @@
 layout: post
 title:  "手机端注册"
 date:   2016-03-22
-categories: jekyll update
+categories: html
 ---
 
 好久没有写过手机端的注册页面了，本以为很简单。。。

@@ -2,7 +2,7 @@
 layout: post
 title:  "开发规范的思考"
 date:   2016-04-11
-categories: jekyll update
+categories: others
 ---
 
 ui规范是一个听上去很酷，做起来很烦，每每在项目中想念的东西。

@@ -2,7 +2,7 @@
 layout: post
 title:  "svg学习"
 date:   2016-05-09
-categories: jekyll update
+categories: [svg, html5]
 ---
 
 	做前端开发两年多了，发现自己竟然对svg没有一点了解，在开发中也没有用过svg。在codepen上又经常见到非常酷炫的svg做出来的效果，于是就产生了学习了解的兴趣。
